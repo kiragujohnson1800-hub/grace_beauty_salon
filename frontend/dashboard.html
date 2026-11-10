@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efeb">
+  <meta name="description" content="Your Grace Beauty Salon appointments and services.">
+  <title>Your salon | Grace Beauty Salon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="dashboard-page">
+  <div class="app-shell">
+    <aside class="sidebar" data-sidebar>
+      <a class="brand" href="dashboard.html" aria-label="Grace Beauty Salon dashboard"><span class="brand-mark">G</span><span>grace<span class="brand-sub">BEAUTY SALON</span></span></a>
+      <div class="sidebar-label">YOUR SALON</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="side-link active" type="button" data-nav="overview"><span class="nav-icon">⌂</span>Overview</button>
+        <button class="side-link" type="button" data-nav="services" data-roles="customer,admin"><span class="nav-icon">✿</span>Services</button>
+        <button class="side-link" type="button" data-nav="appointments" data-roles="customer,salonist,admin"><span class="nav-icon">▦</span>Appointments</button>
+        <button class="side-link" type="button" data-nav="users" data-roles="admin"><span class="nav-icon">♡</span>People</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help"><span class="help-spark">✦</span><strong>A moment for you</strong><span>Self-care is always a good idea.</span></div>
+        <button class="side-link signout-button" type="button" data-logout><span class="nav-icon">↪</span>Sign out</button>
+      </div>
+    </aside>
+    <div class="main-column">
+      <header class="topbar">
+        <button class="icon-button menu-toggle" type="button" aria-label="Open navigation" data-menu-toggle>☰</button>
+        <div class="breadcrumb"><span data-role-label>Your salon</span><span>/</span><strong data-page-label>Overview</strong></div>
+        <div class="profile-chip"><span class="avatar" data-avatar>G</span><span data-user-name>Loading…</span></div>
+      </header>
+      <main class="dashboard-content">
+        <div class="form-alert dashboard-alert" data-alert role="alert" hidden></div>
+        <section class="view-panel active" data-view="overview">
+          <div class="welcome-banner">
+            <div class="welcome-content">
+              <p class="eyebrow">A MOMENT, JUST FOR YOU</p>
+              <h1>Hello, <span data-welcome-name>beautiful</span>.</h1>
+              <p data-welcome-copy>Take a breath, make a little time for yourself, and let us take care of the rest.</p>
+              <button class="button button-light" type="button" data-go="services">Explore our services <span aria-hidden="true">→</span></button>
+            </div>
+            <div class="welcome-flower" aria-hidden="true">✿</div>
+          </div>
+          <div class="welcome-photo-row">
+            <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="A calm, light-filled beauty salon" loading="lazy">
+            <div><p class="eyebrow">A SOFTER KIND OF SELF-CARE</p><h2>Come as you are.<br>Leave feeling renewed.</h2><p>Thoughtful treatments, lovely details, and a little space in your day that belongs to you.</p><button class="text-button" type="button" data-go="services">Find your next favorite <span aria-hidden="true">→</span></button></div>
+          </div>
+          <div class="section-heading overview-heading"><div><p class="eyebrow">A GOOD PLACE TO START</p><h2>At a glance</h2></div></div>
+          <div class="stat-grid" data-stats></div>
+          <div class="section-heading"><div><p class="eyebrow">WHAT'S NEXT</p><h2>Upcoming visits</h2></div><button class="text-button" type="button" data-go="appointments">View appointments →</button></div>
+          <div class="appointment-list" data-overview-appointments><div class="loading-card"><span class="loader"></span>Loading your visits…</div></div>
+        </section>
+
+        <section class="view-panel" data-view="services" hidden>
+          <div class="page-heading"><div><p class="eyebrow">A LITTLE SOMETHING FOR YOU</p><h1 data-section-title>Our services</h1><p class="muted">Thoughtful treatments, made to fit you.</p></div><button class="button button-primary" type="button" data-add-service hidden>+ Add a service</button></div>
+          <div class="service-grid" data-services><div class="loading-card"><span class="loader"></span>Finding your favorites…</div></div>
+        </section>
+
+        <section class="view-panel" data-view="appointments" hidden>
+          <div class="page-heading"><div><p class="eyebrow" data-appointment-kicker>YOUR SELF-CARE PLANS</p><h1 data-section-title>Appointments</h1><p class="muted" data-appointment-copy>All of your upcoming and past salon visits, in one place.</p></div><button class="button button-primary" type="button" data-book-open>+ Book a visit</button></div>
+          <div class="filter-row"><label for="appointment-filter">Show</label><select class="input filter-select" id="appointment-filter" data-appointment-filter><option value="all">All appointments</option><option value="pending">Pending</option><option value="confirmed">Confirmed</option><option value="completed">Completed</option><option value="cancelled">Cancelled</option></select></div>
+          <div class="appointment-list" data-appointments><div class="loading-card"><span class="loader"></span>Loading appointments…</div></div>
+        </section>
+
+        <section class="view-panel" data-view="users" hidden>
+          <div class="page-heading"><div><p class="eyebrow">SALON COMMUNITY</p><h1 data-section-title>People</h1><p class="muted">Manage customer and salonist accounts.</p></div><button class="button button-primary" type="button" data-add-salonist>+ Add a salonist</button></div>
+          <div class="filter-row"><label for="people-filter">Show</label><select class="input filter-select" id="people-filter" data-people-filter><option value="">Everyone</option><option value="customer">Customers</option><option value="salonist">Salonists</option></select></div>
+          <div class="people-list" data-users><div class="loading-card"><span class="loader"></span>Loading people…</div></div>
+        </section>
+        <footer class="dashboard-footer">Made with care <span>✦</span> Grace Beauty Salon</footer>
+      </main>
+    </div>
+  </div>
+  <div class="mobile-scrim" data-scrim></div>
+
+  <dialog class="booking-dialog" data-booking-dialog aria-labelledby="booking-title">
+    <form class="dialog-inner" data-booking-form>
+      <button class="dialog-close" type="button" aria-label="Close" data-book-close>×</button>
+      <p class="eyebrow">YOUR NEXT LITTLE TREAT</p><h2 id="booking-title">Book an appointment</h2><p class="muted">Choose a service and a time that works for you.</p>
+      <div class="form-alert" data-alert role="alert" hidden></div>
+      <label class="field-label" for="booking-service">Service</label><select class="input" id="booking-service" name="service_id" required><option value="">Choose a service</option></select>
+      <label class="field-label" for="booking-date">Date</label><input class="input" id="booking-date" name="appointment_date" type="date" required>
+      <label class="field-label" for="booking-time">Preferred time</label><input class="input" id="booking-time" name="appointment_time" type="time" required>
+      <label class="field-label" for="booking-notes">Anything we should know? <span class="optional">(optional)</span></label><textarea class="input textarea" id="booking-notes" name="notes" rows="3" maxlength="1000" placeholder="Add a note for the salon"></textarea>
+      <button class="button button-primary button-wide" type="submit">Request appointment <span aria-hidden="true">→</span></button>
+    </form>
+  </dialog>
+
+  <dialog class="booking-dialog" data-service-dialog aria-labelledby="service-dialog-title">
+    <form class="dialog-inner" data-service-form>
+      <button class="dialog-close" type="button" aria-label="Close" data-service-close>×</button>
+      <p class="eyebrow">SALON MENU</p><h2 id="service-dialog-title">Add a service</h2>
+      <div class="form-alert" data-alert role="alert" hidden></div>
+      <label class="field-label" for="new-service-name">Service name</label><input class="input" id="new-service-name" name="name" maxlength="120" required>
+      <label class="field-label" for="new-service-description">Description</label><textarea class="input textarea" id="new-service-description" name="description" rows="3" maxlength="1000"></textarea>
+      <div class="form-two"><div><label class="field-label" for="new-service-price">Price</label><input class="input" id="new-service-price" name="price" type="number" min="0" step="0.01" required></div><div><label class="field-label" for="new-service-duration">Minutes</label><input class="input" id="new-service-duration" name="duration_minutes" type="number" min="5" max="600" value="30" required></div></div>
+      <button class="button button-primary button-wide" type="submit">Save service <span aria-hidden="true">→</span></button>
+    </form>
+  </dialog>
+
+  <dialog class="booking-dialog" data-salonist-dialog aria-labelledby="salonist-title">
+    <form class="dialog-inner" data-salonist-form>
+      <button class="dialog-close" type="button" aria-label="Close" data-salonist-close>×</button>
+      <p class="eyebrow">GROW YOUR TEAM</p><h2 id="salonist-title">Add a salonist</h2><p class="muted">Share their temporary password securely with them.</p>
+      <div class="form-alert" data-alert role="alert" hidden></div>
+      <label class="field-label" for="salonist-name">Full name</label><input class="input" id="salonist-name" name="name" maxlength="120" required>
+      <label class="field-label" for="salonist-email">Email address</label><input class="input" id="salonist-email" name="email" type="email" maxlength="190" required>
+      <label class="field-label" for="salonist-phone">Phone <span class="optional">(optional)</span></label><input class="input" id="salonist-phone" name="phone" maxlength="30">
+      <label class="field-label" for="salonist-password">Temporary password (12+ characters)</label><input class="input" id="salonist-password" name="password" type="password" minlength="12" required>
+      <button class="button button-primary button-wide" type="submit">Create account <span aria-hidden="true">→</span></button>
+    </form>
+  </dialog>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

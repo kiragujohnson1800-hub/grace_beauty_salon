@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efeb">
+  <meta name="description" content="Book a little time for yourself at Grace Beauty Salon.">
+  <title>Welcome | Grace Beauty Salon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <section class="auth-story login-story">
+      <a class="brand brand-light" href="index.html" aria-label="Grace Beauty Salon home"><span class="brand-mark">G</span><span>grace<span class="brand-sub">BEAUTY SALON</span></span></a>
+      <div class="story-copy">
+        <p class="eyebrow">YOUR MOMENT, YOUR GLOW</p>
+        <h1>Beauty begins<br>with a little <em>grace.</em></h1>
+        <p>Make time for yourself. Find thoughtful treatments, warm hands, and your own quiet moment.</p>
+        <div class="story-quote"><span>★★★★★</span><br>“I always leave feeling like myself, only brighter.”</div>
+      </div>
+      <div class="story-note">A little care goes a long way <span>✦</span></div>
+    </section>
+    <section class="auth-panel">
+      <form class="auth-card" data-auth-form="login">
+        <div class="mobile-brand brand"><span class="brand-mark">G</span><span>grace<span class="brand-sub">BEAUTY SALON</span></span></div>
+        <p class="eyebrow">WELCOME BACK</p>
+        <h2>Sign in to your account</h2>
+        <p class="muted auth-intro">Your next little moment of self-care is waiting.</p>
+        <div class="form-alert" data-alert role="alert" hidden></div>
+        <label class="field-label" for="login-role">I’m signing in as</label>
+        <select class="input" id="login-role" name="role" required>
+          <option value="customer">Customer</option>
+          <option value="salonist">Salonist</option>
+          <option value="admin">Administrator</option>
+        </select>
+        <label class="field-label" for="login-email">Email address</label>
+        <input class="input" id="login-email" name="email" type="email" placeholder="you@example.com" autocomplete="username" required>
+        <label class="field-label" for="login-password">Password</label>
+        <input class="input" id="login-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+        <button class="button button-primary button-wide" type="submit">Sign in <span aria-hidden="true">→</span></button>
+        <p class="auth-switch">New to Grace? <a href="register.html">Create an account</a></p>
+        <p class="form-footnote">Your details are only used to take care of your salon visit.</p>
+      </form>
+    </section>
+  </main>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

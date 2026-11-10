@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efeb">
+  <meta name="description" content="Create your Grace Beauty Salon account and book your next visit.">
+  <title>Create an account | Grace Beauty Salon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <section class="auth-story register-story">
+      <a class="brand brand-light" href="index.html" aria-label="Grace Beauty Salon home"><span class="brand-mark">G</span><span>grace<span class="brand-sub">BEAUTY SALON</span></span></a>
+      <div class="story-copy">
+        <p class="eyebrow">A LITTLE MORE YOU</p>
+        <h1>Your self-care<br>story starts <em>here.</em></h1>
+        <p>Keep your appointments and favorite salon services together in one lovely place.</p>
+        <div class="story-quote"><span>✦</span><br>Make yourself a priority.</div>
+      </div>
+      <div class="story-note">A space to feel like yourself <span>✦</span></div>
+    </section>
+    <section class="auth-panel">
+      <form class="auth-card" data-auth-form="register">
+        <div class="mobile-brand brand"><span class="brand-mark">G</span><span>grace<span class="brand-sub">BEAUTY SALON</span></span></div>
+        <p class="eyebrow">JOIN OUR COMMUNITY</p>
+        <h2>Create your account</h2>
+        <p class="muted auth-intro">A few details and you're on your way.</p>
+        <div class="form-alert" data-alert role="alert" hidden></div>
+        <label class="field-label" for="register-name">Full name</label>
+        <input class="input" id="register-name" name="name" type="text" placeholder="Your name" autocomplete="name" maxlength="120" required>
+        <label class="field-label" for="register-email">Email address</label>
+        <input class="input" id="register-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" maxlength="190" required>
+        <label class="field-label" for="register-phone">Phone number <span class="optional">(optional)</span></label>
+        <input class="input" id="register-phone" name="phone" type="tel" placeholder="Your phone number" autocomplete="tel" maxlength="30">
+        <label class="field-label" for="register-password">Password</label>
+        <input class="input" id="register-password" name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" maxlength="200" required>
+        <button class="button button-primary button-wide" type="submit">Create account <span aria-hidden="true">→</span></button>
+        <p class="auth-switch">Already have an account? <a href="index.html">Sign in</a></p>
+      </form>
+    </section>
+  </main>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
